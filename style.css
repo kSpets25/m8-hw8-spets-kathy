@@ -39,12 +39,31 @@ header {
 header a {
   font-size: 1.5rem;
   color: var(--off-white);
+  transition: transform 200ms;
+  
+  
 }
 /* end header link animations */
+
+header a:hover{
+  transform: translateY(-10px);
+  color: aqua;
+  
+}
 
 /* article link transitions */
 main a {
   color: var(--danger-color);
+  width: 100px;
+  height: 100px;
+  background-color: none;
+  transition: 200ms;
+}
+
+main a:hover {
+  background-color: #FDD219;
+  transform: translateY(-5px);
+  padding:5px;
 }
 /* end article link transitions */
 
@@ -100,6 +119,31 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: transform 150ms,
+ 
+}
+
+section.hero >button:hover {
+  transform: translateY(-10px);
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #2ba805;
+    box-shadow: 0 0 5px #2ba805;
+  }
+  50% {
+    background-color: #49e819;
+    box-shadow: 0 0 20px #49e819;
+  }
+  100% {
+    background-color: #2ba805;
+    box-shadow: 0 0 5px #2ba805;
+  }
+}
+
+section.hero >button {
+  animation: glowing 1300ms infinite;
 }
 
 main article {
